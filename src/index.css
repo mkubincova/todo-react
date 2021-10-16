@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap');
+
+/*****  General styling  *****/
+body {
+  margin: 0;
+  font-family: 'Roboto',
+  sans-serif;
+  background: rgb(166, 204, 236);
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fredoka One', cursive;
+}
+h1{
+  color: rgb(21, 131, 228);
+  font-size: 3rem;
+}
+.center{
+  text-align: center;
+}
+
+.todo-app{
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.container-item{
+  flex: 1;
+}
+
+
+
+/*****  Form  *****/
+input[type="text"]{
+  border: none;
+  background: transparent;
+  width: 50%;
+  margin: 10px 0 20px 10px;
+  border-bottom: 2px solid rgb(21, 131, 228);
+  font-family: 'Roboto';
+  font-size: 1.3rem;
+  transition: 0.3s ease-in-out;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+label{
+  color: #fff;
+}
+
+
+
+/*****  Lists  *****/
+.todos{
+  margin: 20px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.todos.finished{
+  background: rgb(197, 197, 197);
+}
+.todo-item{
+  padding: 15px 10px;
+  border-top: 0.5px solid rgb(148, 148, 148);
+  display: flex;
+  justify-content: space-between;
+}
+.todo-item:last-child {
+  border-top: none;
+}
+.todo-item span{
+  padding: 0 30px;
+}
+.todo-item.empty{
+  font-family: 'Fredoka One',
+  cursive;
+  color: green;
+  margin: 0 auto;
+}
+
+
+
+/*****  Buttons  *****/
+/* done button */
+div.done {
+  min-width: 20px;
+  height: 20px;
+  position: relative;
+  float: right;
+  border-radius: 50%;
+  background: green;
+  cursor: pointer;
+}
+div.done:before,
+div.done:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+div.done:before {
+  width: 7px;
+  transform: rotate(45deg);
+  top: 11px;
+  left: 3.5px;
+}
+div.done:after {
+  width: 10px;
+  transform: rotate(-45deg);
+  top: 10px;
+  right: 3px;
+}
+
+/* delete button */
+div.delete {
+  min-width: 20px;
+  height: 20px;
+  position: relative;
+  float: right;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+}
+div.delete:before,
+div.delete:after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  top: 9px;
+}
+div.delete:before {
+  transform: rotate(45deg);
+  left: 3px;
+}
+div.delete:after {
+  transform: rotate(-45deg);
+  right: 3px;
+}
+
+/* back button */
+div.back {
+  min-width: 20px;
+  height: 20px;
+  position: relative;
+  float: right;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+}
+div.back:before,
+div.back:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  left: 5px;
+}
+div.back:before {
+  top: 7px;
+  transform: rotate(-45deg);
+}
+div.back:after {
+  top: 12px;
+  transform: rotate(45deg);
+}
+
+
+/*****  Media query  *****/
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
