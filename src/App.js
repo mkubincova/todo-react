@@ -5,15 +5,8 @@ import Done from "./Done";
 
 class App extends React.Component {
   state = {
-    todos: [
-      {id:1, content: "go grocery shopping"},
-      {id:2, content: "clean the apartment"},
-      {id:3, content: "water ALL plants!"}
-    ],
-    dones: [
-      {id:4, content: "find a new TV show"},
-      {id:9, content: "walk the dog"}
-    ]
+    todos: window.localStorage.getItem('todos') ? JSON.parse(window.localStorage.getItem('todos')) : [],
+    dones: window.localStorage.getItem('dones') ? JSON.parse(window.localStorage.getItem('dones')) : [],
   }
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => {
@@ -22,6 +15,7 @@ class App extends React.Component {
     this.setState({
       todos: todos
     })
+    window.localStorage.setItem('todos', JSON.stringify(todos));
   }
   deleteDone = (id) => {
     const dones = this.state.dones.filter(done => {
@@ -30,6 +24,7 @@ class App extends React.Component {
     this.setState({
       dones: dones
     })
+    window.localStorage.setItem('dones', JSON.stringify(dones));
   }
   addTodo = (todo) => {
     todo.id = Math.random();
@@ -37,6 +32,7 @@ class App extends React.Component {
     this.setState({
       todos: todos
     })
+    window.localStorage.setItem('todos', JSON.stringify(todos));
   }
   moveToDone = (todo) => {
     let dones = [...this.state.dones, todo];
@@ -44,6 +40,7 @@ class App extends React.Component {
       dones: dones
     })
     this.deleteTodo(todo.id)
+    window.localStorage.setItem('dones', JSON.stringify(dones));
   }
   moveToTodo = (done) => {
     let todos = [...this.state.todos, done];
@@ -51,6 +48,7 @@ class App extends React.Component {
       todos: todos
     })
     this.deleteDone(done.id)
+    window.localStorage.setItem('todos', JSON.stringify(todos));
   }
   render(){
     return (
