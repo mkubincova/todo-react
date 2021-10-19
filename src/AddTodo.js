@@ -22,6 +22,7 @@ class AddTodo extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Add new task:</label>
                     <input type="text" onChange={this.handleChange} value={this.state.content}/>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         )

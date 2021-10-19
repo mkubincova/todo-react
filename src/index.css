@@ -58,8 +58,21 @@ input[type="text"]:focus {
 label{
   color: #fff;
 }
-
-
+button{
+  margin: 0 10px;
+  padding: 5px;
+  border: 2px solid rgb(21, 131, 228);
+  border-radius: 5px;
+  background: rgb(21, 131, 228);
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+button:hover{
+  background: #fff;
+  color: rgb(21, 131, 228);
+}
 
 /*****  Lists  *****/
 .todos{
@@ -184,9 +197,16 @@ div.back:after {
 }
 
 
-/*****  Media query  *****/
+/*****  Media queries  *****/
 @media screen and (max-width: 900px) {
   .container {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 500px) {
+  button {
+    width: calc(100% - 40px);
+  }
+}
+
