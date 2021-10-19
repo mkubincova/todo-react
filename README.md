@@ -1,5 +1,5 @@
 # Preview
-![screenshot-laptop](https://github.com/mkubincova/todo-react/blob/main/screenshot.png) ![screenshot-tables](https://github.com/mkubincova/todo-react/blob/main/screenshot-2.png) ![screenshot-mobile](https://github.com/mkubincova/todo-react/blob/main/screenshot-3.png)
+![screenshot-laptop](https://github.com/mkubincova/todo-react/blob/main/screenshot.png)
 
 # Getting Started with Create React App
 
