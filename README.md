@@ -1,9 +1,7 @@
 # Preview
-<div style="display:flex;">
 ![screenshot-laptop](https://github.com/mkubincova/todo-react/blob/main/screenshot.png)
 ![screenshot-tables](https://github.com/mkubincova/todo-react/blob/main/screenshot-2.png)
 ![screenshot-mobile](https://github.com/mkubincova/todo-react/blob/main/screenshot-3.png)
-<div>
 
 # Getting Started with Create React App
 
